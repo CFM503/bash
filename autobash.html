@@ -202,6 +202,12 @@
             L.push('# ---- 安装 ----');
             L.push('do_install() {');
             L.push('    check_root');
+            L.push('    if [ -z "${DOWNLOAD_URL}" ]; then');
+            L.push('        echo -e "${YELLOW}未设置下载地址，进入自定义安装...${PLAIN}"');
+            L.push('        echo ""');
+            L.push('        do_custom_install');
+            L.push('        return');
+            L.push('    fi');
             L.push('    if check_installed; then');
             L.push('        echo -e "${YELLOW}${NAME} 已经安装过了，如需重新安装请先卸载。${PLAIN}"');
             L.push('        return');
