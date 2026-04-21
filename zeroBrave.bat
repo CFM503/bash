@@ -1,0 +1,3 @@
+@echo off
+cd /d "%~dp0"
+start "" "brave.exe" --aggressive-tab-discard --aggressive-cache-discard --enable-features=MemorySaver --memory-saver-discard-timeout=60 --js-flags=--max-old-space-size=256 --disable-accelerated-video-decode --disable-background-networking --disable-sync --disable-back-forward-cache --disable-renderer-backgrounding --disable-background-timer-throttling --disable-default-apps --disable-component-update --disable-metrics-reporting --user-data-dir="%~dp0data" --no-first-run --no-default-browser-check --disable-machine-id --disable-encryption-win --homepage=https://www.bing.com --default-search-provider-name=Bing --default-search-provider-url="https://www.bing.com/search?q={searchTerms}"
